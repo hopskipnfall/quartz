@@ -1,3 +1,41 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Obsidianite Custom Theme Overrides
+
+// 1. Bold/strong text with linear gradient
+strong, .cm-strong {
+  background-color: #7aa2f7;
+  background-image: linear-gradient(62deg, #87c2fd 0%, #dcb9fc 100%) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #7aa2f7;
+  display: inline;
+}
+
+// 2. Italic text custom color
+em, .cm-em {
+  color: #bb9af7 !important;
+}
+
+// 3. Custom scrollbars matching Obsidianite
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightgray);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+// 4. Header bottom-borders with linear-gradient fading to background
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, var(--tertiary), var(--light), var(--light), var(--light)) !important;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
